@@ -1,4 +1,6 @@
-
+const urlEncode = (text) => {
+  
+}
 
 console.log(urlEncode("Lighthouse Labs"));
 console.log(urlEncode(" Lighthouse Labs "));
