@@ -1,5 +1,6 @@
 const urlEncode = (text) => {
-  
+  // Simple solution:
+  return text.trim().replaceAll(" ", "%20");
 }
 
 console.log(urlEncode("Lighthouse Labs"));
