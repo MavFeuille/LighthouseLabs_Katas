@@ -1,5 +1,12 @@
 const instructorWithLongestName = (instructors) => {
-  
+  let longestName = {name: "", course: ""};
+
+  for (let obj of instructors) {
+    if (obj.name.length > longestName.name.length) {
+      longestName = obj;
+    }
+  }
+  return longestName;
 }
 
 console.log(instructorWithLongestName([
