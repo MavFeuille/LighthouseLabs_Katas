@@ -1,4 +1,6 @@
-
+const whereCanIPark = (spots, vehicle) => {
+  
+}
 
 console.log(whereCanIPark(
   [
