@@ -1,4 +1,6 @@
-
+const checkAir = (samples, threshold) => {
+  
+}
 
 // checkAir(['clean', 'dirty], num of highest acceptable amount of DIRTY)
 
