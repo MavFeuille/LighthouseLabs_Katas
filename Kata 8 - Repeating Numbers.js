@@ -1,4 +1,6 @@
-
+const repeatNumbers = (data) => {
+  
+}
 
 console.log(repeatNumbers([[1, 10]]));
 console.log(repeatNumbers([[1, 2], [2, 3]]));
