@@ -1,10 +1,9 @@
 const repeatNumbers = (data) => {
   let output = 0;
-  
+
   for (let i = 0; i < data.length; i++) {
-    for (let j = 0; j < data[i][1].length; j++) {
-      
-    }
+    output = data.map(([value, count]) => String(value).repeat(count));
+    return output.join(', ');
   }
 }
 
