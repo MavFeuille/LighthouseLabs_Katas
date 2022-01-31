@@ -1,7 +1,9 @@
 const repeatNumbers = (data) => {
+  let output = 0;
+  
   for (let i = 0; i < data.length; i++) {
-    for (let j = 0; j < data[i].length; j++) {
-      data[i][0].repeat(data[i[1]]);
+    for (let j = 0; j < data[i][1].length; j++) {
+      
     }
   }
 }
