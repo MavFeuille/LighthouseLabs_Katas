@@ -23,8 +23,7 @@ const totalVolume = (solids) => {
   let total = 0;
 
   for (const solid of solids) {
-    // console.log("solid: ", solid);
-
+    // console.log("solid: ", solid); <-- to check what is passed in solids
     if (solid.type === "sphere") {
       total += sphereVolume(solid.radius);
     } 
@@ -35,7 +34,6 @@ const totalVolume = (solids) => {
       total += prismVolume(solid.height, solid.width, solid.depth);
     }
   }
-
   return total;
 }
 
