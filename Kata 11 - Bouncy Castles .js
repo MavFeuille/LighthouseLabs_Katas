@@ -7,7 +7,8 @@ const sphereVolume = (radius) => {
 console.log(4186 < sphereVolume(10) && sphereVolume(10) < 4189);
 
 const coneVolume = (radius, height) => {
-
+  // V = PI * r^2 * h / 3
+  return PI * Math.pow(radius, 2) * height / 3;
 }
 console.log(45 < coneVolume(3, 5) && coneVolume(3, 5) < 49);
 
