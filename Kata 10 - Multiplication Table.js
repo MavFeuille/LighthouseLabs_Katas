@@ -1,13 +1,13 @@
 const multiplicationTable = (maxValue) => {
-  let table = "";
+  let row = "";
 
   for (let i = 1; i <= maxValue; i++) {
     for (let j = 1; j <= maxValue; j++) {
-      table += (i * j) + " ";
+      row += (i * j) + " ";
     }
-    table += "\n";
+    row += "\n";
   }
-  return table;
+  return row;
 }
 
 console.log(multiplicationTable(1));
