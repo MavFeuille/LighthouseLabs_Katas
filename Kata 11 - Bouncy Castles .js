@@ -12,6 +12,12 @@ const coneVolume = (radius, height) => {
 }
 console.log(45 < coneVolume(3, 5) && coneVolume(3, 5) < 49);
 
+const prismVolume = (height, width, depth) => {
+
+}
+console.log(prismVolume(3, 4, 5) === 60);
+
+
 const largeSphere = {
   type: 'sphere',
   radius: 40
