@@ -1,5 +1,5 @@
 const chooseRecipe = function(bakeryA, bakeryB, recipes) {
-  // Code here!
+ 
 }
 
 let bakeryA = ['saffron', 'eggs', 'tomato paste', 'coconut', 'custard'];
@@ -21,21 +21,21 @@ let recipes = [
 
 console.log(chooseRecipe(bakeryA, bakeryB, recipes));
 
-bakeryA = ['potatoes', 'bay leaf', 'raisins'];
-bakeryB = ['red bean', 'dijon mustard', 'apples'];
-recipes = [
-    {
-        name: 'Potato Ganache',
-        ingredients: ['potatoes', 'chocolate']
-    },
-    {
-        name: 'Sweet Fish',
-        ingredients: ['anchovies', 'honey']
-    },
-    {
-        name: "Nima's Famous Dijon Raisins",
-        ingredients: ['dijon mustard', 'raisins']
-    }
-];
+// bakeryA = ['potatoes', 'bay leaf', 'raisins'];
+// bakeryB = ['red bean', 'dijon mustard', 'apples'];
+// recipes = [
+//     {
+//         name: 'Potato Ganache',
+//         ingredients: ['potatoes', 'chocolate']
+//     },
+//     {
+//         name: 'Sweet Fish',
+//         ingredients: ['anchovies', 'honey']
+//     },
+//     {
+//         name: "Nima's Famous Dijon Raisins",
+//         ingredients: ['dijon mustard', 'raisins']
+//     }
+// ];
 
-console.log(chooseRecipe(bakeryA, bakeryB, recipes));
+// console.log(chooseRecipe(bakeryA, bakeryB, recipes));
