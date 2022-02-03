@@ -15,8 +15,6 @@ let recipes = [
     }
 ];
 
-// console.log(chooseRecipe(bakeryA, bakeryB, recipes));
-
 // Helper function  to check if the given bakery possesses any of ingredients from that recipe
 const ingredientCheck = (bakery, ingredients) => {
   for (const bakeryIngredient of bakery) {
@@ -26,14 +24,10 @@ const ingredientCheck = (bakery, ingredients) => {
       // console.log("bakeryIngredient: ", bakeryIngredient);
       if (recipes[i].ingredients.includes(bakeryIngredient)) {
         // console.log("bakeryIngredient: ", bakeryIngredient, "recipes: ", recipes[i]);
-        return recipes[i];
+        return recipes[i].name;
       }
     }
   }
 }
-
 console.log(ingredientCheck(bakeryB, recipes))
 
-const chooseRecipe = (bakeryA, bakeryB, recipes) => {
-  
-}
