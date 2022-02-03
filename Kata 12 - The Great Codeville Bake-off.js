@@ -33,3 +33,7 @@ const ingredientCheck = (bakery, ingredients) => {
 }
 
 console.log(ingredientCheck(bakeryB, recipes))
+
+const chooseRecipe = (bakeryA, bakeryB, recipes) => {
+  
+}
