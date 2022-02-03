@@ -25,10 +25,11 @@ const ingredientCheck = (bakery, ingredients) => {
       // console.log("ingredients in recipes: ", recipes[i].ingredients);
       // console.log("bakeryIngredient: ", bakeryIngredient);
       if (recipes[i].ingredients.includes(bakeryIngredient)) {
-        console.log("bakeryIngredient: ", bakeryIngredient, "recipes: ", recipes[i]);
+        // console.log("bakeryIngredient: ", bakeryIngredient, "recipes: ", recipes[i]);
+        return recipes[i];
       }
     }
   }
 }
 
-console.log(ingredientCheck(bakeryA, recipes))
+console.log(ingredientCheck(bakeryB, recipes))
