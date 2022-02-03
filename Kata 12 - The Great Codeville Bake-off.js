@@ -1,3 +1,13 @@
+const chooseRecipe = (bakeryA, bakeryB, recipes) => {
+  // console.log("check BakeryA result: ", ingredientCheck(bakeryA, recipes));
+  // console.log("check BakeryB result: ", ingredientCheck(bakeryB, recipes));
+
+  if (ingredientCheck(bakeryA,recipes) === ingredientCheck(bakeryB, recipes)){
+    // console.log("ingredientCheck recipe: ", ingredientCheck(bakeryA, recipes).name);
+    return ingredientCheck(bakeryA, recipes).name;
+  }
+}
+
 let bakeryA = ['saffron', 'eggs', 'tomato paste', 'coconut', 'custard'];
 let bakeryB = ['milk', 'butter', 'cream cheese'];
 let recipes = [
@@ -51,14 +61,4 @@ const ingredientCheck = (bakery, ingredients) => {
   }
 }
 // console.log(ingredientCheck(bakeryA, recipes))
-
-const chooseRecipe = (bakeryA, bakeryB, recipes) => {
-  // console.log("check BakeryA result: ", ingredientCheck(bakeryA, recipes));
-  // console.log("check BakeryB result: ", ingredientCheck(bakeryB, recipes));
-
-  if (ingredientCheck(bakeryA,recipes) === ingredientCheck(bakeryB, recipes)){
-    // console.log("ingredientCheck recipe: ", ingredientCheck(bakeryA, recipes).name);
-    return ingredientCheck(bakeryA, recipes).name;
-  }
-}
 
