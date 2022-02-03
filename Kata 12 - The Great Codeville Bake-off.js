@@ -15,6 +15,27 @@ let recipes = [
     }
 ];
 
+console.log(chooseRecipe(bakeryA, bakeryB, recipes));
+
+bakeryA = ['potatoes', 'bay leaf', 'raisins'];
+bakeryB = ['red bean', 'dijon mustard', 'apples'];
+recipes = [
+    {
+        name: 'Potato Ganache',
+        ingredients: ['potatoes', 'chocolate']
+    },
+    {
+        name: 'Sweet Fish',
+        ingredients: ['anchovies', 'honey']
+    },
+    {
+        name: "Nima's Famous Dijon Raisins",
+        ingredients: ['dijon mustard', 'raisins']
+    }
+];
+
+console.log(chooseRecipe(bakeryA, bakeryB, recipes));
+
 // Helper function  to check if the given bakery possesses any of ingredients from that recipe
 const ingredientCheck = (bakery, ingredients) => {
   for (const bakeryIngredient of bakery) {
@@ -24,10 +45,20 @@ const ingredientCheck = (bakery, ingredients) => {
       // console.log("bakeryIngredient: ", bakeryIngredient);
       if (recipes[i].ingredients.includes(bakeryIngredient)) {
         // console.log("bakeryIngredient: ", bakeryIngredient, "recipes: ", recipes[i]);
-        return recipes[i].name;
+        return recipes[i];
       }
     }
   }
 }
-console.log(ingredientCheck(bakeryB, recipes))
+// console.log(ingredientCheck(bakeryA, recipes))
+
+const chooseRecipe = (bakeryA, bakeryB, recipes) => {
+  // console.log("check BakeryA result: ", ingredientCheck(bakeryA, recipes));
+  // console.log("check BakeryB result: ", ingredientCheck(bakeryB, recipes));
+
+  if (ingredientCheck(bakeryA,recipes) === ingredientCheck(bakeryB, recipes)){
+    // console.log("ingredientCheck recipe: ", ingredientCheck(bakeryA, recipes).name);
+    return ingredientCheck(bakeryA, recipes).name;
+  }
+}
 
