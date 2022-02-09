@@ -5,6 +5,7 @@ const talkingCalendar = (date) => {
   let day = Number(dateArr[2]);
 
   const monthName = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  let monthOutput = monthName[month - 1];
 
   if (day === 1 || day === 21 || day === 31) {
     day += "st";
@@ -15,6 +16,8 @@ const talkingCalendar = (date) => {
   } else {
     day += "th";
   }
+
+  return `${monthOutput} ${day}, ${year}`;
 }
 
 console.log(talkingCalendar("2017/12/02"));
