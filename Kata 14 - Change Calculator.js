@@ -1,15 +1,15 @@
 const calculateChange = (total, cash) => {
-  /* conversion rate
-  penny = 1
-  nickel = 5 * penny;
-  dime = 10 * penny;
-  quarter = 25 * penny;
-  oneDollar = 100 * penny;
-  twoDollars = 200 * penny;
-  fiveDollars = 500 * penny;
-  tenDollars = 1000 * penny;
-  twentyDollars = 2000 * p
-  */
+  const dominations = {
+    twentyDollar: 2000,
+    tenDollar: 1000,
+    fiveDollar: 500,
+    twoDollar: 200,
+    oneDollar: 100,
+    quarter: 25,
+    dime: 10,
+    nickel: 5,
+    penny: 1
+  };
  
   // change
   let changeAmount = cash - total;
@@ -17,6 +17,7 @@ const calculateChange = (total, cash) => {
   // placeholder for output
   let output = {}
   
+
 }
 
 console.log(calculateChange(1787, 2000));
