@@ -12,12 +12,26 @@ const calculateChange = (total, cash) => {
   };
  
   // change
-  const changeAmount = cash - total;
-
+  let changeAmount = cash - total;
+  
   // placeholder for output
   let output = {}
-  const currentD
+  
+  for (const key in denominations) {
+    const currentDemoniation = denominations[key];
+    let outputKey = key;
 
+    if (changeAmount - currentDemoniation > 0) {
+      changeAmount -= currentDemoniation;
+      output[outputKey] = 1;
+
+      while (currentDemoniation <= changeAmount) {
+        output[outputKey] += 1;
+        changeAmount -= currentDemoniation;
+      }
+    } 
+  }
+  return output;
 }
 
 console.log(calculateChange(1787, 2000));
