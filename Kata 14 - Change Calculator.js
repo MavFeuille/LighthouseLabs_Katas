@@ -12,18 +12,11 @@ const calculateChange = (total, cash) => {
   */
  
   // change
-  let change = cash - total;
+  let changeAmount = cash - total;
 
   // placeholder for output
   let output = {}
-  };
-
-  while (change > 0) {
-    if (change >= 2000) {
-      output.twentyDollar += 1;
-      change -= 1000;
-    } else if ()
-  }
+  
 }
 
 console.log(calculateChange(1787, 2000));
