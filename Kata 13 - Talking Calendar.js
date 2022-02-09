@@ -4,8 +4,8 @@ const talkingCalendar = (date) => {
   let month = Number(dateArr[1]);
   let day = Number(dateArr[2]);
 
-  const monthName = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-  let monthOutput = monthName[month - 1];
+  const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  let monthOutput = monthNames[month - 1];
 
   if (day === 1 || day === 21 || day === 31) {
     day += "st";
