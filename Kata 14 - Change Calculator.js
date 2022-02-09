@@ -1,5 +1,5 @@
 const calculateChange = (total, cash) => {
-  const dominations = {
+  const denominations = {
     twentyDollar: 2000,
     tenDollar: 1000,
     fiveDollar: 500,
@@ -12,11 +12,11 @@ const calculateChange = (total, cash) => {
   };
  
   // change
-  let changeAmount = cash - total;
+  const changeAmount = cash - total;
 
   // placeholder for output
   let output = {}
-  
+  const currentD
 
 }
 
