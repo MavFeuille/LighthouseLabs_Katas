@@ -1,11 +1,11 @@
 const organizeInstructors = (instructors) => {
   let output = {};
+  let instructorsArray = [];
 
-  for (let i = 0; i < instructors.length; i ++) {
-    instructors[i].course = Object.keys(output);
-    instructors[i].name = Object.values(output);
+  for (let obj = 0; obj < instructors.length; obj++) {
+    
   }
-  console.log("output: ", output);
+ 
 }
 
 console.log(organizeInstructors([
