@@ -11,10 +11,10 @@ const calculateChange = (total, cash) => {
     penny: 1
   };
  
-  // change
+  // Get change amount
   let changeAmount = cash - total;
   
-  // placeholder for output
+  // Placeholder for output
   let output = {}
   
   for (const key in denominations) {
