@@ -1,6 +1,5 @@
 const organizeInstructors = (instructors) => {
   let output = {};
-  let instructorsArray = [];
   let courseNames = [];
 
   // Check if the course name has appeared in courseNames array, if not, push it to courseNames array
@@ -11,6 +10,18 @@ const organizeInstructors = (instructors) => {
     }
     // console.log("courseNames: ", courseNames);
   }
+
+  // Set empty [] as value/placeholder for each course name
+  // Loop through each course name, if the course name in courseName array is the same as instructors.course, push the instructor name into the empty []
+  courseNames.forEach((course) => {
+    output[course] = [];
+    for (const obj of instructors){
+      if (obj.course === course){
+        output[course].push(obj.name);
+      }
+    }
+  });
+  return output;
 }
 
 console.log(organizeInstructors([
