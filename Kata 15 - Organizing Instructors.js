@@ -2,7 +2,7 @@ const organizeInstructors = (instructors) => {
   let output = {};
   let instructorsArray = [];
 
-  for (let obj = 0; obj < instructors.length; obj++) {
+  for (const obj of instructors){
     
   }
  
