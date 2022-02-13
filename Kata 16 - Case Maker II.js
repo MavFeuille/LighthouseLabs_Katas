@@ -5,8 +5,10 @@ Precedence of each of the casing styles are as follows, values higher in the lis
 3. upper, lower 
 */
 
-const makeCase = function(input, cases){
+const makeCase = (input, cases) => {
   let output = "";
-
-  if (cases === "")
+  const inputSplit = input.split("");
+  
 }
+
+console.log(makeCase("this is a string", "camel"));
