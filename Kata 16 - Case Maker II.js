@@ -2,13 +2,23 @@
 Precedence of each of the casing styles are as follows, values higher in the list should be processed first:
 1. camel, pascal, snake, kebab, title
 2. vowel, consonant
-3. upper, lower 
+3. upper, lower
 */
 
 const makeCase = (input, cases) => {
   let output = "";
   const inputSplit = input.split("");
-  
-}
+
+  if (cases === "camel") {
+    for (let i = 0; i < inputSplit.length; i++) {
+      if (inputSplit[i - 1] === " ") {
+        inputSplit[i] = inputSplit[i].toUpperCase();
+      }
+      // console.log(inputSplit[i]);
+    }
+    output = inputSplit.join("").replace(/\s+/g, "");
+  }
+  return output;
+};
 
 console.log(makeCase("this is a string", "camel"));
