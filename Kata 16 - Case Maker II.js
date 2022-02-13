@@ -7,9 +7,9 @@ Precedence of each of the casing styles are as follows, values higher in the lis
 
 const makeCase = (input, cases) => {
   let output = "";
-  const inputSplit = input.split("");
-
+  
   if (cases === "camel") {
+    const inputSplit = input.split("");
     for (let i = 0; i < inputSplit.length; i++) {
       if (inputSplit[i - 1] === " ") {
         inputSplit[i] = inputSplit[i].toUpperCase();
@@ -18,7 +18,25 @@ const makeCase = (input, cases) => {
     }
     output = inputSplit.join("").replace(/\s+/g, "");
   }
+  
+  if (cases === "pascal") {
+    const newInput = input.charAt(0).toUpperCase() + input.slice(1);
+    // console.log("🚀 ~ file: Kata 16 - Case Maker II.js ~ line 24 ~ makeCase ~ newinput", newInput)
+    const newInputSplit = newInput.split("");
+    // console.log("🚀 ~ file: Kata 16 - Case Maker II.js ~ line 26 ~ makeCase ~ newInputSplit", newInputSplit)
+    
+    for (let i = 0; i < newInputSplit.length; i++) {
+      if (newInputSplit[i - 1] === " ") {
+        newInputSplit[i] = newInputSplit[i].toUpperCase();
+      }
+    }
+    // console.log(newInputSplit);
+    output = newInputSplit.join("").replace(/\s+/g, "");
+    
+  }
+
   return output;
 };
 
-console.log(makeCase("this is a string", "camel"));
+// console.log(makeCase("this is a string", "camel"));
+console.log(makeCase("this is a string", "pascal"));
