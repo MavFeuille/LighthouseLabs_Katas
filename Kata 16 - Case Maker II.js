@@ -93,7 +93,6 @@ const makeCase = (input, cases) => {
     for (let i = 0; i < inputSplit.length; i++) {
       output += inputSplit[i].toLowerCase();
     }
-    console.log("Line 96: ", output);
   }
 
 
