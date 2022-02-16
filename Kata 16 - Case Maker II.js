@@ -59,10 +59,10 @@ const makeCase = (input, cases) => {
 
     for(let i = 0; i < inputSplit.length; i++) {
       if (inputSplit[i] === "a" || inputSplit[i] === "e" || inputSplit[i] === "i" || inputSplit[i] === "o" || inputSplit[i] === "u") {  
-        inputSplit[i]= inputSplit.toUpperCase();
+        inputSplit[i]= inputSplit[i].toUpperCase();
       }
-      console.log(inputSplit);
     }
+    output = inputSplit.join("")
    
   }
 
