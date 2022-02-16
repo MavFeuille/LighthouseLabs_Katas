@@ -41,6 +41,18 @@ const makeCase = (input, cases) => {
   if (cases === "kebab") {
     return input.replace(/\s/g, "-");
   }
+
+  if (cases === "title") {
+    const newInput = input.charAt(0).toUpperCase() + input.slice(1);
+    
+    for (let i = 0; i < newInput.length; i++) {
+      if (newInput[i - 1] === " ") {
+        newInput[i] = newInput[i].toUpperCase();
+      }
+    }
+    console.log(newInput);
+  }
+
   return output;
 };
 
