@@ -7,91 +7,103 @@ Precedence of each of the casing styles are as follows, values higher in the lis
 
 const makeCase = (input, cases) => {
   let output = "";
-  
-  if (cases === "camel") {
-    const inputSplit = input.split("");
-    for (let i = 0; i < inputSplit.length; i++) {
-      if (inputSplit[i - 1] === " ") {
-        inputSplit[i] = inputSplit[i].toUpperCase();
-      }
-      // console.log(inputSplit[i]);
-    }
-    output = inputSplit.join("").replace(/\s+/g, "");
+  let caseArray = [];
+
+  if(Array.isArray(cases)) {
+    for (const style of cases) {
+      caseArray.push(cases[style]);
+    } 
+  } else {
+    caseArray.push(cases);
   }
-  
-  if (cases === "pascal") {
-    const newInput = input.charAt(0).toUpperCase() + input.slice(1);
-    // console.log("🚀 ~ file: Kata 16 - Case Maker II.js ~ line 24 ~ makeCase ~ newinput", newInput)
-    const newInputSplit = newInput.split("");
-    // console.log("🚀 ~ file: Kata 16 - Case Maker II.js ~ line 26 ~ makeCase ~ newInputSplit", newInputSplit)
+
+  for (const style of caseArray) {
+
+    if (style === "camel") {
+      const inputSplit = input.split("");
+      for (let i = 0; i < inputSplit.length; i++) {
+        if (inputSplit[i - 1] === " ") {
+          inputSplit[i] = inputSplit[i].toUpperCase();
+        }
+        // console.log(inputSplit[i]);
+      }
+      output = inputSplit.join("").replace(/\s+/g, "");
+    }
     
-    for (let i = 0; i < newInputSplit.length; i++) {
-      if (newInputSplit[i - 1] === " ") {
-        newInputSplit[i] = newInputSplit[i].toUpperCase();
+    if (style === "pascal") {
+      const newInput = input.charAt(0).toUpperCase() + input.slice(1);
+      // console.log("🚀 ~ file: Kata 16 - Case Maker II.js ~ line 24 ~ makeCase ~ newinput", newInput)
+      const newInputSplit = newInput.split("");
+      // console.log("🚀 ~ file: Kata 16 - Case Maker II.js ~ line 26 ~ makeCase ~ newInputSplit", newInputSplit)
+      
+      for (let i = 0; i < newInputSplit.length; i++) {
+        if (newInputSplit[i - 1] === " ") {
+          newInputSplit[i] = newInputSplit[i].toUpperCase();
+        }
       }
+      // console.log(newInputSplit);
+      output = newInputSplit.join("").replace(/\s+/g, "");
     }
-    // console.log(newInputSplit);
-    output = newInputSplit.join("").replace(/\s+/g, "");
-  }
-
-  if (cases === "snake") {
-    return input.replace(/\s/g, "_");
-  }
-
-  if (cases === "kebab") {
-    return input.replace(/\s/g, "-");
-  }
-
-  if (cases === "title") {
-    const newInput = input.charAt(0).toUpperCase() + input.slice(1);
-    const newInputSplit = newInput.split("");
-
-    for (let i = 0; i < newInputSplit.length; i++) {
-      if (newInputSplit[i - 1] === " ") {
-        newInputSplit[i] = newInputSplit[i].toUpperCase();
+  
+    if (style === "snake") {
+      return input.replace(/\s/g, "_");
+    }
+  
+    if (style === "kebab") {
+      return input.replace(/\s/g, "-");
+    }
+  
+    if (style === "title") {
+      const newInput = input.charAt(0).toUpperCase() + input.slice(1);
+      const newInputSplit = newInput.split("");
+  
+      for (let i = 0; i < newInputSplit.length; i++) {
+        if (newInputSplit[i - 1] === " ") {
+          newInputSplit[i] = newInputSplit[i].toUpperCase();
+        }
       }
+      output = newInputSplit.join("");
     }
-    output = newInputSplit.join("");
-  }
-
-  if (cases === "vowel") {
-    const inputSplit = input.split("");
-
-    for(let i = 0; i < inputSplit.length; i++) {
-      if (inputSplit[i] === "a" || inputSplit[i] === "e" || inputSplit[i] === "i" || inputSplit[i] === "o" || inputSplit[i] === "u") {  
-        inputSplit[i]= inputSplit[i].toUpperCase();
+  
+    if (style === "vowel") {
+      const inputSplit = input.split("");
+  
+      for(let i = 0; i < inputSplit.length; i++) {
+        if (inputSplit[i] === "a" || inputSplit[i] === "e" || inputSplit[i] === "i" || inputSplit[i] === "o" || inputSplit[i] === "u") {  
+          inputSplit[i]= inputSplit[i].toUpperCase();
+        }
       }
+      output = inputSplit.join("")
     }
-    output = inputSplit.join("")
-  }
-
-  if (cases === "consonant") {
-    const inputSplit = input.split("");
-
-    for(let i = 0; i < inputSplit.length; i++) {
-      if (inputSplit[i] === "a" || inputSplit[i] === "e" || inputSplit[i] === "i" || inputSplit[i] === "o" || inputSplit[i] === "u") {  
-        inputSplit[i]= inputSplit[i].toLowerCase();
-      } else {
-        inputSplit[i]= inputSplit[i].toUpperCase();
+  
+    if (style === "consonant") {
+      const inputSplit = input.split("");
+  
+      for(let i = 0; i < inputSplit.length; i++) {
+        if (inputSplit[i] === "a" || inputSplit[i] === "e" || inputSplit[i] === "i" || inputSplit[i] === "o" || inputSplit[i] === "u") {  
+          inputSplit[i]= inputSplit[i].toLowerCase();
+        } else {
+          inputSplit[i]= inputSplit[i].toUpperCase();
+        }
       }
+      output = inputSplit.join("");
     }
-    output = inputSplit.join("");
-  }
-
-  if (cases === "upper") {
-    const inputSplit = input.split("");
-
-    for (let i = 0; i < inputSplit.length; i++) {
-      output += inputSplit[i].toUpperCase();
+  
+    if (style === "upper") {
+      const inputSplit = input.split("");
+  
+      for (let i = 0; i < inputSplit.length; i++) {
+        output += inputSplit[i].toUpperCase();
+      }
+      console.log("Line 87: ", output);
     }
-    console.log("Line 87: ", output);
-  }
-
-  if (cases === "lower") {
-    const inputSplit = input.split("");
-
-    for (let i = 0; i < inputSplit.length; i++) {
-      output += inputSplit[i].toLowerCase();
+  
+    if (style === "lower") {
+      const inputSplit = input.split("");
+  
+      for (let i = 0; i < inputSplit.length; i++) {
+        output += inputSplit[i].toLowerCase();
+      }
     }
   }
 
