@@ -87,6 +87,15 @@ const makeCase = (input, cases) => {
     console.log("Line 87: ", output);
   }
 
+  if (cases === "lower") {
+    const inputSplit = input.split("");
+
+    for (let i = 0; i < inputSplit.length; i++) {
+      output += inputSplit[i].toLowerCase();
+    }
+    console.log("Line 96: ", output);
+  }
+
 
   return output;
 };
@@ -98,4 +107,4 @@ const makeCase = (input, cases) => {
 // console.log(makeCase("this is a string", "title"));
 // console.log(makeCase("this is a string", "vowel"));
 // console.log(makeCase("this is a string", "consonant"));
-console.log(makeCase("this is a string", "upper"));
+console.log(makeCase("this is a string", "lower"));
