@@ -47,3 +47,4 @@ const makeCase = (input, cases) => {
 // console.log(makeCase("this is a string", "camel"));
 // console.log(makeCase("this is a string", "pascal"));
 // console.log(makeCase("this is a string", "snake"));
+console.log(makeCase("this is a string", "kebab"));
