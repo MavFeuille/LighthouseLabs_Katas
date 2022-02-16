@@ -32,11 +32,13 @@ const makeCase = (input, cases) => {
     }
     // console.log(newInputSplit);
     output = newInputSplit.join("").replace(/\s+/g, "");
-    
   }
 
+  if (cases === "snake") {
+    return input.replace(/\s/g, "_");
+  }
   return output;
 };
 
 // console.log(makeCase("this is a string", "camel"));
-console.log(makeCase("this is a string", "pascal"));
+// console.log(makeCase("this is a string", "pascal"));
