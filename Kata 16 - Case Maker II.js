@@ -63,8 +63,19 @@ const makeCase = (input, cases) => {
       }
     }
     output = inputSplit.join("")
-   
   }
+
+  if (cases === "consonant") {
+    const inputSplit = input.split("");
+
+    for(let i = 0; i < inputSplit.length; i++) {
+      if (inputSplit[i] !== "a" || inputSplit[i] !== "e" || inputSplit[i] !== "i" || inputSplit[i] !== "o" || inputSplit[i] !== "u") {  
+        inputSplit[i]= inputSplit[i].toUpperCase();
+      }
+    }
+    output = inputSplit.join("")
+  }
+
 
   return output;
 };
@@ -74,4 +85,4 @@ const makeCase = (input, cases) => {
 // console.log(makeCase("this is a string", "snake"));
 // console.log(makeCase("this is a string", "kebab"));
 // console.log(makeCase("this is a string", "title"));
-console.log(makeCase("this is a string", "vowel"));
+// console.log(makeCase("this is a string", "vowel"));
