@@ -5,7 +5,7 @@ const urlDecode = (text) => {
                   .replace(/&/g, ", ")
                   .replace(/=/g, ": ")
                   .replace(/%20/g, " ")
-
+                  .split(", ");
   console.log("🚀 ~ file: Kata 17 - JS Object From URL Encoded String.js ~ line 7 ~ urlDecode ~ newText", newText)
   
 
