@@ -26,7 +26,6 @@ const makeCase = (input, cases) => {
         if (inputSplit[i - 1] === " ") {
           inputSplit[i] = inputSplit[i].toUpperCase();
         }
-        // console.log(inputSplit[i]);
       }
       output = inputSplit.join("").replace(/\s+/g, "");
     }
