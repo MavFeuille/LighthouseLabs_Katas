@@ -7,17 +7,18 @@ Precedence of each of the casing styles are as follows, values higher in the lis
 
 const makeCase = (input, cases) => {
   let output = "";
-  let caseArray = [];
+  let casesArray = [];
 
   if(Array.isArray(cases)) {
     for (const style of cases) {
-      caseArray.push(cases[style]);
+      casesArray.push(style);
     } 
   } else {
-    caseArray.push(cases);
+    casesArray.push(cases);
   }
+  console.log("Line 19 -- casesArray: ", casesArray);
 
-  for (const style of caseArray) {
+  for (const style of casesArray) {
 
     if (style === "camel") {
       const inputSplit = input.split("");
@@ -46,11 +47,15 @@ const makeCase = (input, cases) => {
     }
   
     if (style === "snake") {
-      return input.replace(/\s/g, "_");
+      for (let i = 0; i < style.length; i++) {
+        
+      }
+      // output = input.replace(/\s/g, "_");
+      // console.log("Line 52 'snake': ", output);
     }
   
     if (style === "kebab") {
-      return input.replace(/\s/g, "-");
+      output = input.replace(/\s/g, "-");
     }
   
     if (style === "title") {
@@ -95,7 +100,7 @@ const makeCase = (input, cases) => {
       for (let i = 0; i < inputSplit.length; i++) {
         output += inputSplit[i].toUpperCase();
       }
-      console.log("Line 87: ", output);
+      console.log("Line 100 'upper': ", output);
     }
   
     if (style === "lower") {
@@ -106,8 +111,6 @@ const makeCase = (input, cases) => {
       }
     }
   }
-
-
   return output;
 };
 
