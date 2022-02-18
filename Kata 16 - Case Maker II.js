@@ -118,6 +118,8 @@ const makeCase = (input, cases) => {
         output += inputSplit[i].toLowerCase();
       }
     }
+
+    input = output;
   }
   return output;
 };
