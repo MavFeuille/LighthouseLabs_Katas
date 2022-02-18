@@ -50,7 +50,7 @@ const makeCase = (input, cases) => {
   
     if (style === "snake") {
       output = input.replace(/\s/g, "_");
-      // console.log("Line 52 'snake': ", output);
+      console.log("Line 52 'snake': ", output);
     }
   
     if (style === "kebab") {
@@ -109,7 +109,7 @@ const makeCase = (input, cases) => {
         output += inputSplit[i].toLowerCase();
       }
     }
-    input = output;
+    input = output; // Important for muliple cases like ['upper', 'snake']
   }
   return output;
 };
