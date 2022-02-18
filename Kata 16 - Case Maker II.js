@@ -9,6 +9,7 @@ const makeCase = (input, cases) => {
   let output = "";
   let casesArray = [];
 
+  // Check if cases is in array form
   if(Array.isArray(cases)) {
     for (const style of cases) {
       casesArray.push(style);
@@ -19,6 +20,7 @@ const makeCase = (input, cases) => {
   console.log("Line 19 -- casesArray: ", casesArray);
 
   for (const style of casesArray) {
+
 
     if (style === "camel") {
       const inputSplit = input.split("");
