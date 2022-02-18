@@ -35,22 +35,18 @@ const makeCase = (input, cases) => {
     
     if (style === "pascal") {
       const newInput = input.charAt(0).toUpperCase() + input.slice(1);
-      // console.log("🚀 ~ file: Kata 16 - Case Maker II.js ~ line 24 ~ makeCase ~ newinput", newInput)
       const newInputSplit = newInput.split("");
-      // console.log("🚀 ~ file: Kata 16 - Case Maker II.js ~ line 26 ~ makeCase ~ newInputSplit", newInputSplit)
       
       for (let i = 0; i < newInputSplit.length; i++) {
         if (newInputSplit[i - 1] === " ") {
           newInputSplit[i] = newInputSplit[i].toUpperCase();
         }
       }
-      // console.log(newInputSplit);
       output = newInputSplit.join("").replace(/\s+/g, "");
     }
   
     if (style === "snake") {
       output = input.replace(/\s/g, "_");
-      console.log("Line 52 'snake': ", output);
     }
   
     if (style === "kebab") {
@@ -99,7 +95,6 @@ const makeCase = (input, cases) => {
       for (let i = 0; i < inputSplit.length; i++) {
         output += inputSplit[i].toUpperCase();
       }
-      console.log("Line 111 'upper': ", output);
     }
   
     if (style === "lower") {
