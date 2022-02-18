@@ -19,8 +19,7 @@ const makeCase = (input, cases) => {
   }
 
   for (const style of casesArray) {
-
-
+    // "Camel" case style
     if (style === "camel") {
       const inputSplit = input.split("");
       for (let i = 0; i < inputSplit.length; i++) {
@@ -32,6 +31,7 @@ const makeCase = (input, cases) => {
       output = inputSplit.join("").replace(/\s+/g, "");
     }
     
+    // "Pascal" case style
     if (style === "pascal") {
       const newInput = input.charAt(0).toUpperCase() + input.slice(1);
       const newInputSplit = newInput.split("");
@@ -44,14 +44,17 @@ const makeCase = (input, cases) => {
       output = newInputSplit.join("").replace(/\s+/g, "");
     }
   
+    // "Snake" case style
     if (style === "snake") {
       output = input.replace(/\s/g, "_");
     }
   
+    // "Kebab" case style
     if (style === "kebab") {
       output = input.replace(/\s/g, "-");
     }
   
+    // "Title" case style
     if (style === "title") {
       const newInput = input.charAt(0).toUpperCase() + input.slice(1);
       const newInputSplit = newInput.split("");
@@ -64,6 +67,7 @@ const makeCase = (input, cases) => {
       output = newInputSplit.join("");
     }
   
+    // "Style" case style
     if (style === "vowel") {
       const inputSplit = input.split("");
   
@@ -75,6 +79,7 @@ const makeCase = (input, cases) => {
       output = inputSplit.join("")
     }
   
+    // "Consonant" case style
     if (style === "consonant") {
       const inputSplit = input.split("");
   
@@ -88,6 +93,7 @@ const makeCase = (input, cases) => {
       output = inputSplit.join("");
     }
   
+    // "Upper" case style
     if (style === "upper") {
       const inputSplit = input.split("");
   
@@ -96,6 +102,7 @@ const makeCase = (input, cases) => {
       }
     }
   
+    // "Lower" case style
     if (style === "lower") {
       const inputSplit = input.split("");
   
