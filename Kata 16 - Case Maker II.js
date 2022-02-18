@@ -47,8 +47,14 @@ const makeCase = (input, cases) => {
     }
   
     if (style === "snake") {
-      for (let i = 0; i < style.length; i++) {
-        
+      for (let i = 0; i < input.length; i++) {
+        if (input[i - 1] === " ") {
+          output = output.slice(0, -1);
+          output += "_";
+          output += input[i];
+        } else {
+          output += input[i];
+        }
       }
       // output = input.replace(/\s/g, "_");
       // console.log("Line 52 'snake': ", output);
