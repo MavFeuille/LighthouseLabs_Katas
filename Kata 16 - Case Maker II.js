@@ -17,7 +17,7 @@ const makeCase = (input, cases) => {
   } else {
     casesArray.push(cases);
   }
-  console.log("Line 19 -- casesArray: ", casesArray);
+  console.log("Line 20 -- casesArray: ", casesArray);
 
   for (const style of casesArray) {
 
@@ -49,16 +49,7 @@ const makeCase = (input, cases) => {
     }
   
     if (style === "snake") {
-      for (let i = 0; i < input.length; i++) {
-        if (input[i - 1] === " ") {
-          output = output.slice(0, -1);
-          output += "_";
-          output += input[i];
-        } else {
-          output += input[i];
-        }
-      }
-      // output = input.replace(/\s/g, "_");
+      output = input.replace(/\s/g, "_");
       // console.log("Line 52 'snake': ", output);
     }
   
@@ -108,7 +99,7 @@ const makeCase = (input, cases) => {
       for (let i = 0; i < inputSplit.length; i++) {
         output += inputSplit[i].toUpperCase();
       }
-      console.log("Line 100 'upper': ", output);
+      console.log("Line 111 'upper': ", output);
     }
   
     if (style === "lower") {
@@ -118,7 +109,6 @@ const makeCase = (input, cases) => {
         output += inputSplit[i].toLowerCase();
       }
     }
-
     input = output;
   }
   return output;
