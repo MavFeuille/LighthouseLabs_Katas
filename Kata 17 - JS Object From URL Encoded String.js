@@ -7,14 +7,17 @@ const urlDecode = (text) => {
                   .replace(/%20/g, " ")
                   .split(", ");
 
-  // console.log("🚀 ~ file: Kata 17 - JS Object From URL Encoded String.js ~ line 9 ~ urlDecode ~ newText", newText)
-  
+  /* Loop through newText and split each item by ":" to get key-value pair.
+     Therefore, each item will be split into 2 indices. 
+     [0] will be output[key]
+     [1] will be the value of output[key]
+  */
   for (const item of newText) {
     let newItem = item.split(":");
     output[newItem[0]] = newItem[1]
-    console.log("output in for loop", output)
+    // console.log("output in for loop", output)
   }
-  // return output;
+  return output;
 }
 
 console.log(urlDecode("city=Vancouver&weather=lots%20of%20rain"));
