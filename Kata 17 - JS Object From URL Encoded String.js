@@ -1,6 +1,7 @@
 const urlDecode = (text) => {
   let output = {};
 
+  // Decode give URL encoding rules
   let newText = text
                   .replace(/&/g, ", ")
                   .replace(/=/g, ": ")
