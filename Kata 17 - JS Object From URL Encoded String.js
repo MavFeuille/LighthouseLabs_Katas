@@ -15,7 +15,6 @@ const urlDecode = (text) => {
   for (const item of newText) {
     let newItem = item.split(":");
     output[newItem[0]] = newItem[1]
-    // console.log("output in for loop", output)
   }
   return output;
 }
