@@ -9,7 +9,7 @@ const squareCode = (message) => {
 
   for (let i = 0; i < columns; i++) {
     for (let j = i; j < message.length; j++) {
-      console.log("j: ", columns[i][j]);
+      
     }
   }
 };
