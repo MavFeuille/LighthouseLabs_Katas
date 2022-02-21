@@ -10,17 +10,14 @@ const squareCode = (message) => {
 
   // Perform for loop whenever i < 3 (columns)
   for (let i = 0; i < columns; i++) {
-    // console.log("Message in i-loop: ", message);
-    console.log("columns[i] :", i);
+    // Print each character in message according to each column
     for (let j = i; j < message.length; j += columns) {
-      // console.log("message[j] :", message[j]);
       output += message[j];
     }
-    // Add space after output when it reaches the last index of each row (the last column)
+    // Add space after output if it reaches the last index of each row (the last column)
     if (i < columns - 1) {
       output += " ";
     }
-    console.log("🚀 ~ file: Kata 18 - Square Code.js ~ line 18 ~ squareCode ~ output", output);
   }
   return output;
 };
