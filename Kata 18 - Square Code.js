@@ -16,7 +16,8 @@ const squareCode = (message) => {
       // console.log("message[j] :", message[j]);
       output += message[j];
     }
-    if (i === columns - 1) {
+    // Add space after output when it reaches the last index of each row (the last column)
+    if (i < columns - 1) {
       output += " ";
     }
     console.log("🚀 ~ file: Kata 18 - Square Code.js ~ line 18 ~ squareCode ~ output", output);
