@@ -9,7 +9,9 @@ const squareCode = (message) => {
 
   // Perform for loop whenever i < 3 (columns)
   for (let i = 0; i < columns; i++) {
-    // Print each character in message according to each column
+    /* Print each character in message according to each column.
+       Increment by the number of columns in order to print all characters under each column.
+    */
     for (let j = i; j < message.length; j += columns) {
       output += message[j];
     }
