@@ -15,9 +15,11 @@ const squareCode = (message) => {
     for (let j = i; j < message.length; j += columns) {
       // console.log("message[j] :", message[j]);
       output += message[j];
-      console.log("🚀 ~ file: Kata 18 - Square Code.js ~ line 18 ~ squareCode ~ output", output)
-      
     }
+    if (i === columns - 1) {
+      output += " ";
+    }
+    console.log("🚀 ~ file: Kata 18 - Square Code.js ~ line 18 ~ squareCode ~ output", output);
   }
 };
 
