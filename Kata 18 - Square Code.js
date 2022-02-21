@@ -22,6 +22,7 @@ const squareCode = (message) => {
     }
     console.log("🚀 ~ file: Kata 18 - Square Code.js ~ line 18 ~ squareCode ~ output", output);
   }
+  return output;
 };
 
 console.log(squareCode("chill out"));
