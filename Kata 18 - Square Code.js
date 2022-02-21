@@ -13,7 +13,10 @@ const squareCode = (message) => {
     // console.log("Message in i-loop: ", message);
     console.log("columns[i] :", i);
     for (let j = i; j < message.length; j += columns) {
-      console.log("message[j] :", message[j]);
+      // console.log("message[j] :", message[j]);
+      output += message[j];
+      console.log("🚀 ~ file: Kata 18 - Square Code.js ~ line 18 ~ squareCode ~ output", output)
+      
     }
   }
 };
