@@ -25,3 +25,4 @@ const squareCode = (message) => {
 
 console.log(squareCode("chill out"));
 console.log(squareCode("feed the dog"));
+console.log(squareCode("have a nice day"));
