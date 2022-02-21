@@ -8,10 +8,7 @@ const squareCode = (message) => {
   let columns = Math.ceil(Math.sqrt(message.length));
 
   for (let i = 0; i < columns; i++) {
-    for(let j = i; j < message.length; j += columns) {
-      output += message[j];
-      console.log("🚀 ~ file: Kata 18 - Square Code.js ~ line 13 ~ squareCode ~ output", output)
-    }
+   
   }
 };
 
