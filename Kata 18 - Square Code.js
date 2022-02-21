@@ -4,7 +4,7 @@ const squareCode = (message) => {
   // Remove spaces from original message
   message = message.replace(/\s/g, "");
 
-  // Find out number of columes through the length of message
+  // Find out number of columes through the length of message, formula was given in Kata18
   let columns = Math.ceil(Math.sqrt(message.length));
 
   // Perform for loop whenever i < 3 (columns)
