@@ -1,7 +1,5 @@
-let whiteQueen = [0, 5];
-let blackQueen = [5, 0];
-let output = [];
-const boardColumns = 8;
-let generatedBoard = generatedBoard(whiteQueen, blackQueen);
-
-
+let whiteQueen = [0, 0];
+let blackQueen = [5, 7];
+let generatedBoard = generateBoard(whiteQueen, blackQueen);
+console.log(generatedBoard);
+console.log(queenThreat(generatedBoard));
