@@ -3,7 +3,10 @@ let boardColumns = 8;
 
 const generateBoard = (whiteQueen, blackQueen) => {
   for (let i = 0; i < boardColumns; i++) {
-    console.log(output[i]);
+    output[i] = [];
+    for (let j = 0; j < boardColumns; j++) {
+      
+    }
   }
 }
 
