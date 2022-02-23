@@ -1,3 +1,4 @@
+// Instruction: Count the number of vowels that appear in a given string.
 const numberOfVowels = (data) => {
   let count = 0;
 
