@@ -8,7 +8,7 @@ const generateBoard = (whiteQueen, blackQueen) => {
   let whiteQueenY = whiteQueen[1];
   let blackQueenX = blackQueen[0];
   let blackQueenY = blackQueen[1];
-  
+
   // Create 8 x 8 chessboard 
   for (let i = 0; i < boardColumns; i++) {
     output[i] = [];
@@ -20,7 +20,7 @@ const generateBoard = (whiteQueen, blackQueen) => {
   // 1 in the array represents a queen on the corresponding square
   output[whiteQueenX][whiteQueenY] = 1;
   output[blackQueenX][blackQueenY] = 1;
-  console.log("output: ", output);
+  return output;
 }
 
 
