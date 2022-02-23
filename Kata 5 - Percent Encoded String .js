@@ -1,3 +1,5 @@
+//Instruction: Given a normal string of words and turn it into a percent-encoded string by replacing all whitespace with %20.
+
 const urlEncode = (text) => {
   // Simple solution:
   // return text.trim().replaceAll(" ", "%20");
