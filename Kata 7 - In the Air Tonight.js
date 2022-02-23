@@ -1,3 +1,5 @@
+// Instruction: Implement a function to check air quality. Function must return Polluted if there are too many dirty air samples, or Clean if the proportion of dirty samples is below the threshold.
+
 const checkAir = (samples, threshold) => {
   let dirty = 0;
 
