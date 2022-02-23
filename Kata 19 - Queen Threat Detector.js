@@ -1,6 +1,12 @@
 let output = [];
 let boardColumns = 8;
 
+// Placeholders for whiteQueen and blackQueen X and Y axis
+let whiteQueenX = whiteQueen[0];
+let whiteQueenY = whiteQueen[1];
+let blackQueenX = blackQueen[0];
+let blackQueenY = blackQueen[1];
+
 const generateBoard = (whiteQueen, blackQueen) => {
   // Create 8 x 8 chessboard 
   for (let i = 0; i < boardColumns; i++) {
