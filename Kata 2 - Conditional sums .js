@@ -1,3 +1,5 @@
+// Instruction: Adding only the numbers in the array which match the given condition.
+
 const conditionalSum = (values, condition) => {
   let sum = 0;
 
