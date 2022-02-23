@@ -1,5 +1,6 @@
-// Instruction: Create a parking system that hat returns the coordinates of an available parking spot for the vehicle, or returns false if there is no available spot.
-
+/* Instruction: 
+Create a parking system that hat returns the coordinates of an available parking spot for the vehicle, or returns false if there is no available spot.
+*/
 const whereCanIPark = (spots, vehicle) => {
   for (let y = 0; y < spots.length; y++) {
     for (let x = 0; x < spots[y].length; x++) {
