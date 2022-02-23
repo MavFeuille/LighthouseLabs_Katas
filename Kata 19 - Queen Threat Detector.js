@@ -16,6 +16,9 @@ const generateBoard = (whiteQueen, blackQueen) => {
       output[i].push(0);
     }
   }
+  // 1 in the array represents a queen on the corresponding square
+  output[whiteQueenX][whiteQueenY] = 1;
+  output[blackQueenX][blackQueenY] = 1;
 }
 
 
