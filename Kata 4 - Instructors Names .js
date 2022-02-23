@@ -1,7 +1,5 @@
 //Instruction: Given a list of instructors and determine which instructor has the longest name.
 
-
-
 const instructorWithLongestName = (instructors) => {
   let longestName = {name: "", course: ""};
 
