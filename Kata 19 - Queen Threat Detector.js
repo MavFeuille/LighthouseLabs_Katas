@@ -21,11 +21,16 @@ const generateBoard = (whiteQueen, blackQueen) => {
   output[whiteX][whiteY] = 1;
   output[blackX][blackY] = 1;
   return output;
-}
+};
 
+// Check if 2 queens are positioned to attack each other
+const queenThreat = (generateBoard) => {
+
+};
 
 let whiteQueen = [0, 0];
 let blackQueen = [5, 7];
 let generatedBoard = generateBoard(whiteQueen, blackQueen);
 
 console.log(generatedBoard);
+console.log(queenThreat(generatedBoard));
