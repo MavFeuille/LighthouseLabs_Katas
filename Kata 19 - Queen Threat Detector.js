@@ -15,7 +15,6 @@ let whiteY = whiteQueen[1];
 let blackX = blackQueen[0];
 let blackY = blackQueen[1];
 
-
 const generateBoard = (whiteQueen, blackQueen) => {
   // Create 8 x 8 chessboard 
   for (let i = 0; i < boardColumns; i++) {
