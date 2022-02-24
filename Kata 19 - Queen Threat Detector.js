@@ -33,7 +33,10 @@ const queenThreat = (generatedBoard) => {
   // If both queens are in the same column (Y-axis)
   if (whiteY === blackY) return true;
 
-  
+  // If both queens locates diagonally
+  if (Math.abs(whiteX - blackX) === Math.abs(whiteY - blackY)) return true;
+
+  // Cannot attack
   return false;
 };
 
