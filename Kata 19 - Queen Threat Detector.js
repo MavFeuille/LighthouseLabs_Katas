@@ -27,7 +27,12 @@ const generateBoard = (whiteQueen, blackQueen) => {
 
 // Check if 2 queens are positioned to attack each other
 const queenThreat = (generatedBoard) => {
- 
+  // If both queens are in the same row
+  if (whiteX === blackX) return true;
+  
+  
+
+  return false;
 };
 
 
