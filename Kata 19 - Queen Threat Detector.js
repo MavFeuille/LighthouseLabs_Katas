@@ -4,10 +4,10 @@ let boardColumns = 8;
 
 const generateBoard = (whiteQueen, blackQueen) => {
   // Placeholders for whiteQueen and blackQueen X and Y axis
-  let whiteQueenX = whiteQueen[0];
-  let whiteQueenY = whiteQueen[1];
-  let blackQueenX = blackQueen[0];
-  let blackQueenY = blackQueen[1];
+  let whiteX = whiteQueen[0];
+  let whiteY = whiteQueen[1];
+  let blackX = blackQueen[0];
+  let blackY = blackQueen[1];
 
   // Create 8 x 8 chessboard 
   for (let i = 0; i < boardColumns; i++) {
@@ -18,8 +18,8 @@ const generateBoard = (whiteQueen, blackQueen) => {
     }
   }
   // 1 in the array represents a queen on the corresponding square
-  output[whiteQueenX][whiteQueenY] = 1;
-  output[blackQueenX][blackQueenY] = 1;
+  output[whiteX][whiteY] = 1;
+  output[blackX][blackY] = 1;
   return output;
 }
 
