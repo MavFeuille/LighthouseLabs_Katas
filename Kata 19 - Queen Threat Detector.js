@@ -30,6 +30,9 @@ const queenThreat = (generatedBoard) => {
   // If both queens are in the same row (X-axis)
   if (whiteX === blackX) return true;
 
+  // If both queens are in the same column (Y-axis)
+  if (whiteY === blackY) return true;
+
   
   return false;
 };
