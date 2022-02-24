@@ -1,5 +1,11 @@
-let whiteQueen = [0, 0];
-let blackQueen = [5, 7];
+/*
+1. Create a function to create 8 x 8 chessboard that contains the location of 2 queens
+2. Create a functio to indicate if the 2 queens are positioned to attack each other
+*/
+
+let whiteQueen = [0, 5];
+let blackQueen = [5, 0];
+let generatedBoard = generateBoard(whiteQueen, blackQueen);
 let output = [];
 let boardColumns = 8;
 
@@ -39,9 +45,6 @@ const queenThreat = (generatedBoard) => {
   // Cannot attack
   return false;
 };
-
-
-let generatedBoard = generateBoard(whiteQueen, blackQueen);
 
 console.log(generatedBoard);
 console.log(queenThreat(generatedBoard));
