@@ -14,9 +14,19 @@ const blocksAway = (directions) => {
   console.log("blocksAway after the first step:", blocksAway);
 
   // Loop through (directions) from 2nd index onwards to find the coming directions
-  // for (let i = 2; i < directions.length; i += 2) {
-  //   if (directions[i] === "right") {}
-  // }
+  for (let i = 2; i < directions.length; i += 2) {
+    if (directions[i] === "right") {
+      if (currentDirection === "east") {
+        currentDirection = "south";
+      } else if (currentDirection === "north") {
+        currentDirection = "east";
+      } else if (currentDirection === "south") {
+        currentDirection = "west";
+      } else {
+        currentDirection = "north";
+      }
+    }
+  }
 }
 
 console.log(blocksAway(["right", 2, "left", 3, "left", 1]));
