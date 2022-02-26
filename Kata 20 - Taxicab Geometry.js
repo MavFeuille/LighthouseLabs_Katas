@@ -43,8 +43,7 @@ const blocksAway = (directions) => {
         facing === "east";
       }
     }
-
-    console.log("Position after direction[i]: ", finalPosition);
+    console.log("Position after direction[i]: ", facing);
 
   }
 
