@@ -28,7 +28,22 @@ const blocksAway = (directions) => {
       if (facing === "north") {
         facing === "west";
       }
-    } 
+    } else if (directions[i] === "right") {
+      // Check current facing direction before moving "right" then assign new direction after moved to "right"
+      if (facing === "east") {
+        facing = "south";
+      } 
+      if (facing === "south") {
+        facing = "west";
+      } 
+      if (facing === "west") {
+        facing = "north";
+      } 
+      if (facing === "north") {
+        facing === "east";
+      }
+    }
+
     console.log("Position after direction[i]: ", finalPosition);
 
   }
