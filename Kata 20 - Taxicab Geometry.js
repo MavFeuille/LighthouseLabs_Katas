@@ -18,33 +18,26 @@ const blocksAway = (directions) => {
       // Check current facing direction before moving "left" then assign new direction after moved to "left"
       if (facing === "east") {
         facing = "north";
-      } 
-      if (facing === "south") {
+      } else if (facing === "south") {
         facing = "east";
-      } 
-      if (facing === "west") {
+      } else if (facing === "west") {
         facing = "south";
-      } 
-      if (facing === "north") {
+      } else { // if facing === "north"
         facing === "west";
       }
     } else if (directions[i] === "right") {
       // Check current facing direction before moving "right" then assign new direction after moved to "right"
       if (facing === "east") {
         facing = "south";
-      } 
-      if (facing === "south") {
+      } else if (facing === "south") {
         facing = "west";
-      } 
-      if (facing === "west") {
+      } else if (facing === "west") {
         facing = "north";
-      } 
-      if (facing === "north") {
+      } else {
         facing === "east";
       }
     }
-    console.log("Position after direction[i]: ", facing);
-
+    console.log("Position after direction[i]: ", directions[i], facing);
   }
 
 
