@@ -3,6 +3,7 @@ const blocksAway = (directions) => {
   let facing = "";
 
   // Find position of the 1st step. (Base on the instructions, either left or right will be given)
+  // Only left or right will be given in the directions
   if (directions[0] === "right") {
     finalPosition.east += 1;
     facing = "east";
