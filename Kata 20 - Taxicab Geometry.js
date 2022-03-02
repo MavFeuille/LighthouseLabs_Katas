@@ -33,13 +33,25 @@ const blocksAway = (directions) => {
         facing = "west";
       } else if (facing === "west") {
         facing = "north";
-      } else {
+      } else { // if facing === "north"
         facing === "east";
       }
     }
     console.log("Position after direction[i]: ", directions[i], facing);
   }
 
+  if (facing === "east") {
+    finalPosition.east += 1;
+  }
+  if (facing === "north") {
+    finalPosition.north += 1;
+  }
+  if (facing === "west") {
+    finalPosition.east -= 1;
+  }
+  if (facing === "south") {
+    finalPosition.north -= 1;
+  }
 
 };
 
