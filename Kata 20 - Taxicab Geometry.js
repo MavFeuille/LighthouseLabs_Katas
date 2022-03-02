@@ -38,7 +38,7 @@ const blocksAway = (directions) => {
         facing === "east";
       }
     }
-    console.log("Position after direction[i]: ", directions[i], facing);
+    console.log("Position after direction[i] at Line 41: ", directions[i], facing);
 
     // Increment or decrement each direction's count
     if (facing === "east") {
@@ -54,7 +54,7 @@ const blocksAway = (directions) => {
       finalPosition.north -= directions[i + 1];
     }
 
-    console.log("Counts for finalPosition in for-loop", finalPosition)
+    console.log("Counts for finalPosition in for-loop at Line 57", finalPosition)
   }
   return finalPosition;
 };
