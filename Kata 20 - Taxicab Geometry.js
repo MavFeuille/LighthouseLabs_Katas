@@ -42,16 +42,16 @@ const blocksAway = (directions) => {
 
     // Increment or decrement each direction's count
     if (facing === "east") {
-      finalPosition.east += 1;
+      finalPosition.east += directions[i + 1];
     }
     if (facing === "north") {
-      finalPosition.north += 1;
+      finalPosition.north += directions[i + 1];
     }
     if (facing === "west") {
-      finalPosition.east -= 1;
+      finalPosition.east -= directions[i + 1];
     }
     if (facing === "south") {
-      finalPosition.north -= 1;
+      finalPosition.north -= directions[i + 1];
     }
 
     console.log("Counts for finalPosition in for-loop", finalPosition)
