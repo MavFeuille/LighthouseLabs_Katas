@@ -5,10 +5,10 @@ const blocksAway = (directions) => {
   // Find position of the 1st step. (Base on the instructions, either left or right will be given)
   // Only left or right will be given in the directions
   if (directions[0] === "right") {
-    finalPosition.east += 1;
+    finalPosition.east += directions[1];
     facing = "east";
   } else {
-    finalPosition.north += 1;
+    finalPosition.north += directions[1];
     facing = "north";
   }
   console.log("Position of 1st step at Line 13: ", finalPosition);
