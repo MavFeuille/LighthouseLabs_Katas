@@ -17,7 +17,17 @@ const blocksAway = (directions) => {
   // Loop through directions to find out the next directions base on the first move.
   // Loop directions from 3rd index and increment by 2 since the first 2 indices are already checked above.
   for (let i = 2; i < directions.length; i += 2) {
-    
+    if (directions[i] === "left") {
+      if (currentFacing === "east") {
+        currentFacing = "north";
+      } else if (currentFacing === "south") {
+        currentFacing = "east";
+      } else if (currentFacing === "west") {
+        currentFacing = "south";
+      } else if (currentFacing === "north") {
+        currentFacing = "west";
+      }
+    } 
   }
 }
 
