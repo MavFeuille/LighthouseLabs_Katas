@@ -56,7 +56,7 @@ const blocksAway = (directions) => {
     } else if (currentFacing === "north") {
       finalPosition.north += directions[i + 1];
     }
-    console.log("At the end, currently facing direcion at Line 59: ", currentFacing, "finalPosition from originate: ", finalPosition);
+    console.log("At the end, currently facing direcion at Line 59: ", currentFacing, " and finalPosition from originate: ", finalPosition);
   }
 }
 
