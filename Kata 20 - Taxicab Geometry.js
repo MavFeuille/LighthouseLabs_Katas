@@ -1,4 +1,10 @@
+/*
+The taxi driver will always start at the same position, in the most south west position on the grid. 
+This means that the output will only need to specify an east and north position, since the taxi driver can only end up in these East and North of the starting point.
+*/
+
 const blocksAway = (directions) => {
+
   let finalPosition = {east: 0, north: 0};
   let currentFacing = "";
 
@@ -39,6 +45,13 @@ const blocksAway = (directions) => {
       }
     }
     console.log("Current directions[i]: ", directions[i], "latest currentFacing: ", currentFacing);
+
+    // Count and adjust the number of blocks moved in each direction
+    if (currentFacing === "east") {
+      finalPosition.east += directions[i + 1];
+    } else if (currentFacing === "south") {
+
+    }
   }
 }
 
