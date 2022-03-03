@@ -50,8 +50,13 @@ const blocksAway = (directions) => {
     if (currentFacing === "east") {
       finalPosition.east += directions[i + 1];
     } else if (currentFacing === "south") {
-
+      finalPosition.north -= directions[i + 1];
+    } else if (currentFacing === "west") {
+      finalPosition.east -= directions[i + 1];
+    } else if (currentFacing === "north") {
+      finalPosition.north += directions[i + 1];
     }
+    console.log("At the end, currently facing direciont: ", currentFacing, "finalPosition from originate: ", finalPosition);
   }
 }
 
