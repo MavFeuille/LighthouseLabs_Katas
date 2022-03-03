@@ -38,6 +38,7 @@ const blocksAway = (directions) => {
         currentFacing = "east";
       }
     }
+    console.log("Current directions[i]: ", directions[i], "latest currentFacing: ", currentFacing);
   }
 }
 
