@@ -27,7 +27,17 @@ const blocksAway = (directions) => {
       } else if (currentFacing === "north") {
         currentFacing = "west";
       }
-    } 
+    } else if (directions[i] === "right") {
+      if (currentFacing === "east") {
+        currentFacing = "south";
+      } else if (currentFacing === "south") {
+        currentFacing = "west";
+      } else if (currentFacing === "west") {
+        currentFacing = "north";
+      } else if (currentFacing === "north") {
+        currentFacing = "east";
+      }
+    }
   }
 }
 
