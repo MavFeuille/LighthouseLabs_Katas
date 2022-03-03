@@ -11,6 +11,9 @@ const blocksAway = (directions) => {
     finalPosition.north += directions[1];
     currentFacing = "north";
   }
+  console.log("Currently facing direction after 1st move at Line 14: ", currentFacing);
+  console.log("1st move finalPosition at Line 15: ", finalPosition);
+
   // Loop through directions to find out the next directions base on the first move
 }
 
