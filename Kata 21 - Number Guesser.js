@@ -4,3 +4,7 @@ const prompt = require('prompt-sync')();
 const maxNum = 50;
 let randomNumber = (Math.ceil(Math.random() * maxNum));
 // console.log("randomNumber = ",randomNumber)
+
+const guessNumber = (randomNumber) => {
+  
+}
