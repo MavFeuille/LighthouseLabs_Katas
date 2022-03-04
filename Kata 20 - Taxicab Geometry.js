@@ -17,8 +17,6 @@ const blocksAway = (directions) => {
     finalPosition.north += directions[1];
     currentFacing = "north";
   }
-  // console.log("Currently facing direction after 1st move at Line 14: ", currentFacing);
-  // console.log("1st move finalPosition at Line 15: ", finalPosition);
 
   // Loop through directions to find out the next directions base on the first move.
   // Loop directions from 3rd index and increment by 2 since the first 2 indices are already checked above.
@@ -44,7 +42,6 @@ const blocksAway = (directions) => {
         currentFacing = "east";
       }
     }
-    // console.log("Current directions[i]: ", directions[i], "latest currentFacing: ", currentFacing);
 
     // Count and adjust the number of blocks moved in each direction
     if (currentFacing === "east") {
@@ -56,8 +53,6 @@ const blocksAway = (directions) => {
     } else if (currentFacing === "north") {
       finalPosition.north += directions[i + 1];
     }
-    // console.log("At the end, currently facing direcion at Line 59: ", currentFacing, " and finalPosition from originate: ", finalPosition);
-  }
   return finalPosition;
 }
 
