@@ -6,5 +6,5 @@ const randomNumber = (Math.ceil(Math.random() * maxNum));
 // console.log("randomNumber = ",randomNumber)
 
 const guessNumber = (randomNumber) => {
-  
+  let attempt = 0;
 }
