@@ -53,6 +53,7 @@ const blocksAway = (directions) => {
     } else if (currentFacing === "north") {
       finalPosition.north += directions[i + 1];
     }
+  }  
   return finalPosition;
 }
 
