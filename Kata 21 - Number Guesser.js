@@ -7,4 +7,6 @@ const randomNumber = (Math.ceil(Math.random() * maxNum));
 
 const guessNumber = (randomNumber) => {
   let attempt = 0;
+  let input = prompt("Guess a number: ");
 }
+
