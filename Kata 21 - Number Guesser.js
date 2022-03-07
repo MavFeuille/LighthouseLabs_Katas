@@ -2,14 +2,14 @@ const prompt = require('prompt-sync')();
 
 // Generate random number
 const maxNum = 50;
-const randomNumber = (Math.ceil(Math.random() * maxNum));
-console.log("randomNumber = ",randomNumber)
+const secretNumber = (Math.ceil(Math.random() * maxNum));
+console.log("secretNumber = ",secretNumber)
 
-const guessNumber = (randomNumber) => {
+const guessNumber = (secretNumber) => {
   let attempt = 0;
   let guess = prompt("Guess a number: ");
 
-  
+
 }
 
-guessNumber(randomNumber);
+guessNumber(secretNumber);
