@@ -8,8 +8,28 @@ console.log("secretNumber = ",secretNumber)
 const guessNumber = (secretNumber) => {
   let attempt = 0;
   let guess = Number(prompt("Guess a number: "));
-
   
+  // Prompt user to guess a number
+  // Run through to check if guess === secretNumber
+  // if guess !== secretNumber, increase count of attempt
+  // Prompt user to guess again
+  do {
+    guess;
+    attempt ++;
+    if (guess < secretNumber) {
+      console.log("Too low!");
+    }
+    if (guess > secretNumber) {
+      console.log("Too high!")
+    }
+    if (isNaN(guess)) {
+      console.log("Not a number, Try again!")
+    }
+    if (guess === secretNumber) {
+      console.log(`You got it! You took ${attempt} attempts!`);
+    }
+  
+  } while (guess !== secretNumber);
 }
 
 guessNumber(secretNumber);
