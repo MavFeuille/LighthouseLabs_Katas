@@ -7,6 +7,8 @@ console.log("randomNumber = ",randomNumber)
 
 const guessNumber = (randomNumber) => {
   let attempt = 0;
+  let guess = prompt("Guess a number: ");
+
   
 }
 
