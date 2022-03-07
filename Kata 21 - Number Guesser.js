@@ -7,9 +7,9 @@ console.log("secretNumber = ",secretNumber)
 
 const guessNumber = (secretNumber) => {
   let attempt = 0;
-  let guess = prompt("Guess a number: ");
+  let guess = Number(prompt("Guess a number: "));
 
-
+  
 }
 
 guessNumber(secretNumber);
