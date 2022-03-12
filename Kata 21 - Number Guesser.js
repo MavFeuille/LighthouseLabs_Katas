@@ -7,14 +7,14 @@ console.log("secretNumber = ",secretNumber)
 
 const guessNumber = (secretNumber) => {
   let attempt = 0;
-  let guess = Number(prompt("Guess a number: "));
+  let guess;
   
   // Prompt user to guess a number
   // Run through to check if guess === secretNumber
   // if guess !== secretNumber, increase count of attempt
   // Prompt user to guess again
   do {
-    guess;
+    guess = Number(prompt("Guess a number: "));
     attempt ++;
     if (guess < secretNumber) {
       console.log("Too low!");
