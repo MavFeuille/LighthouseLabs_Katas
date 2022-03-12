@@ -28,7 +28,6 @@ const guessNumber = (secretNumber) => {
     if (guess === secretNumber) {
       console.log(`You got it! You took ${attempt} attempts!`);
     }
-  
   } while (guess !== secretNumber);
 }
 
