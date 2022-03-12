@@ -1,4 +1,6 @@
-const prompt = require('prompt-sync')();
+const prompt = require('prompt-sync')({
+  history: require('prompt-sync-history')()
+});
 
 // Generate random number
 const maxNum = 50;
@@ -17,6 +19,7 @@ const guessNumber = (secretNumber) => {
     guess = Number(prompt("Guess a number: "));
     attempt ++;
     if (guess < secretNumber) {
+      prompt.history.save();
       console.log("Too low!");
     }
     if (guess > secretNumber) {
