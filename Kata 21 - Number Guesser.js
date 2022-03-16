@@ -22,7 +22,14 @@ const guessNumber = (secretNumber) => {
     console.log("guessArray at Line21 : ", guessArray);
     // let findDuplicates = guessArray.filter((input, index) => guessArray.indexOf(input) !== index)
     // console.log("🚀 ~ file: Kata 21 - Number Guesser.js ~ line 24 ~ guessNumber ~ findDuplicates", findDuplicates)
-   
+    const alreadyGuessed = (guessArray) => {
+      guessArray.some((input) => guessArray.indexOf(input) !== guessArray.lastIndexOf(input));
+    }
+    console.log("alreadyGuessed at Line 28: ", alreadyGuessed(guessArray));
+    
+    if (alreadyGuessed(guessArray)) {
+      console.log("Already guessed!");
+    } else {
       attempt ++;
       if (guess < secretNumber) {
         console.log("Too low! at line 30");
@@ -36,7 +43,7 @@ const guessNumber = (secretNumber) => {
       if (guess === secretNumber) {
         console.log(`You got it! You took ${attempt} attempts!`);
       }
-   
+    }
     
   } while (guess !== secretNumber);
 }
