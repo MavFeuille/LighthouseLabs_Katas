@@ -23,7 +23,7 @@ const guessNumber = (secretNumber) => {
     // let findDuplicates = guessArray.filter((input, index) => guessArray.indexOf(input) !== index)
     // console.log("🚀 ~ file: Kata 21 - Number Guesser.js ~ line 24 ~ guessNumber ~ findDuplicates", findDuplicates)
     const alreadyGuessed = (guessArray) => {
-      guessArray.some((input) => guessArray.indexOf(input) !== guessArray.lastIndexOf(input));
+      new Set(guessArray).size !== guessArray.length;
     }
     console.log("alreadyGuessed at Line 28: ", alreadyGuessed(guessArray));
     
