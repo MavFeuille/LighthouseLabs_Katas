@@ -1,4 +1,5 @@
 const prompt = require('prompt-sync')({
+  sigint: true,
   history: require('prompt-sync-history')()
 });
 
