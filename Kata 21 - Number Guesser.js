@@ -1,6 +1,5 @@
 const prompt = require('prompt-sync')({
   sigint: true, // Sigint set to be true to exit by ^C
-  history: require('prompt-sync-history')()
 });
 
 // Generate random number
@@ -18,8 +17,7 @@ const guessNumber = (secretNumber) => {
   // Prompt user to guess again
   do {
     guess = Number(prompt("Guess a number: "));
-    prompt.history.save();
-    console.log("prompt.history at Line21: ", prompt.history.save());
+    
     attempt ++;
     if (guess < secretNumber) {
       console.log("Too low!");
