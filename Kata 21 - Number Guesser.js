@@ -11,7 +11,7 @@ const guessNumber = (secretNumber) => {
   let attempt = 0;
   let guess;
   let guessArray = [];
-  let alreadyGuessed = [];
+ 
   // Prompt user to guess a number
   // Run through to check if guess === secretNumber
   // if guess !== secretNumber, increase count of attempt
@@ -21,13 +21,10 @@ const guessNumber = (secretNumber) => {
     guessArray.push(guess);
     console.log("guessArray at Line21 : ", guessArray);
 
-    guessArray.forEach((input) => {
-      if (alreadyGuessed[input]) {
-        console.log("Already guesed!");
-      } else {
+    
         attempt ++;
         if (guess < secretNumber) {
-          console.log("Too low!");
+          console.log("Too low! at line 30");
         }
         if (guess > secretNumber) {
           console.log("Too high!")
@@ -38,8 +35,7 @@ const guessNumber = (secretNumber) => {
         if (guess === secretNumber) {
           console.log(`You got it! You took ${attempt} attempts!`);
         }
-      }
-    })
+    
   } while (guess !== secretNumber);
 }
 
