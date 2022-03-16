@@ -20,7 +20,9 @@ const guessNumber = (secretNumber) => {
     guess = Number(prompt("Guess a number: "));
     guessArray.push(guess);
     console.log("guessArray at Line21 : ", guessArray);
-
+    let findDuplicates = guessArray.filter((input, index) => guessArray.indexOf(input) !== index)
+    console.log("🚀 ~ file: Kata 21 - Number Guesser.js ~ line 24 ~ guessNumber ~ findDuplicates", findDuplicates)
+ 
     
         attempt ++;
         if (guess < secretNumber) {
