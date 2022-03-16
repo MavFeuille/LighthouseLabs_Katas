@@ -1,5 +1,5 @@
 const prompt = require('prompt-sync')({
-  sigint: true,
+  sigint: true, // Sigint set to be true to exit by ^C
   history: require('prompt-sync-history')()
 });
 
