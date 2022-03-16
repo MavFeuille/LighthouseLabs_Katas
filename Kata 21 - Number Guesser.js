@@ -18,6 +18,7 @@ const guessNumber = (secretNumber) => {
   do {
     guess = Number(prompt("Guess a number: "));
     prompt.history.save();
+    console.log("prompt.history at Line21: ", prompt.history.save());
     attempt ++;
     if (guess < secretNumber) {
       console.log("Too low!");
