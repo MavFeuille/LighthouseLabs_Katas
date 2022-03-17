@@ -21,9 +21,8 @@ const guessNumber = (secretNumber) => {
     guessArray.push(guess);
     console.log("guessArray at Line21 : ", guessArray);
 
-    if (new Set(guessArray).size !== guessArray.length) {
-      console.log("Already guessed!");
-    } else {
+
+
       attempt ++;
       if (guess < secretNumber) {
         console.log("Too low! at line 30");
@@ -37,7 +36,7 @@ const guessNumber = (secretNumber) => {
       if (guess === secretNumber) {
         console.log(`You got it! You took ${attempt} attempts!`);
       } 
-    }
+    
   } while (guess !== secretNumber);
 }
 
