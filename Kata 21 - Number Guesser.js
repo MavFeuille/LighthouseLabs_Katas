@@ -21,7 +21,7 @@ const guessNumber = (secretNumber) => {
     guessArray.push(guess);
     console.log("guessArray at Line21 : ", guessArray);
 
-
+    
 
       attempt ++;
       if (guess < secretNumber) {
@@ -39,5 +39,11 @@ const guessNumber = (secretNumber) => {
     
   } while (guess !== secretNumber);
 }
+
+//Helper function to check if guess already existed in guessArray (duplicates)
+const hasDuplicate = guessArray.some((guess, index) => {
+  guessArray.indexOf(guess) !== index;
+  console.log("Already guessed!");
+})
 
 guessNumber(secretNumber);
