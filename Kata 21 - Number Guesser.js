@@ -20,19 +20,19 @@ const guessNumber = (secretNumber) => {
     guess = Number(prompt("Guess a number: "));
     guessArray.push(guess);
     console.log("guessArray at Line21 : ", guessArray);
-      attempt ++;
-      if (guess < secretNumber) {
-        console.log("Too low! at line 30");
-      }
-      if (guess > secretNumber) {
-        console.log("Too high!")
-      }
-      if (isNaN(guess)) {
-        console.log("Not a number, Try again!")
-      }
-      if (guess === secretNumber) {
-        console.log(`You got it! You took ${attempt} attempts!`);
-      } 
+    attempt ++;
+    if (guess < secretNumber) {
+      console.log("Too low! at line 30");
+    }
+    if (guess > secretNumber) {
+      console.log("Too high!")
+    }
+    if (isNaN(guess)) {
+      console.log("Not a number, Try again!")
+    }
+    if (guess === secretNumber) {
+      console.log(`You got it! You took ${attempt} attempts!`);
+    } 
   } while (guess !== secretNumber);
 }
 
