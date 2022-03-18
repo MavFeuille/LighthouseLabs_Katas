@@ -31,7 +31,7 @@ const guessNumber = (secretNumber) => {
       }
       return true;
     }
-    console.log("🚀 ~ file: Kata 21 - Number Guesser.js ~ line 39 ~ hasDuplicate ~ hasDuplicate", hasDuplicate(guessArray));
+    console.log("🚀 ~ file: Kata 21 - Number Guesser.js ~ line 34 ~ hasDuplicate ~ hasDuplicate", hasDuplicate(guessArray))
  
 
     if (hasDuplicate(guessArray)) {
