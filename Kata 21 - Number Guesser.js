@@ -9,21 +9,15 @@ const secretNumber = (Math.ceil(Math.random() * maxNum));
 
 
 const guessNumber = (secretNumber) => {
-  // let attempts = countAttempts(guessArray);
   let guess;
   let guessArray = [];
  
-  // Prompt user to guess a number
-  // Run through to check if guess === secretNumber
-  // if guess !== secretNumber, increase count of attempt
-  // Prompt user to guess again
   do {
     guess = Number(prompt("Guess a number: "));
     guessArray.push(guess);
     // console.log("guessArray at Line21 : ", guessArray);
 
     if (!hasDuplicate(guessArray)) {
-      // console.log("🚀 ~ file: Kata 21 - Number Guesser.js ~ line 38 ~ guessNumber ~ hasDuplicate", hasDuplicate(guessArray));
       console.log("Already guessed!");
     }
     if (guess < secretNumber) {
