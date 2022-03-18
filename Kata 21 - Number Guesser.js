@@ -1,6 +1,6 @@
 /*
-Write a guessing game where the user has to guess a secret number. 
-After every guess the program tells the user whether their number was too large or too small. 
+Write a guessing game where the user has to guess a secret number.
+After every guess the program tells the user whether their number was too large or too small.
 Inputting the same number multiple times should only count as one try.
 At the end, the number of tries needed should be printed.
 */
@@ -23,9 +23,9 @@ const guessNumber = (secretNumber) => {
     if (guess < secretNumber) console.log("Too low!");
     if (guess > secretNumber) console.log("Too high!");
     if (isNaN(guess)) console.log("Not a number, Try again!");
-    if (guess === secretNumber) console.log(`You got it! You took ${countAttempts(guessArray)} attempts!`); 
+    if (guess === secretNumber) console.log(`You got it! You took ${countAttempts(guessArray)} attempts!`);
   } while (guess !== secretNumber);
-}
+};
 
 //Helper function to check if guess already existed in guessArray (duplicates)
 const hasDuplicate = (array) => {
@@ -36,7 +36,7 @@ const hasDuplicate = (array) => {
     }
   }
   return true;
-}
+};
 
 //Helper function to count attempts of guessing a number
 const countAttempts = (array) => {
@@ -48,6 +48,6 @@ const countAttempts = (array) => {
     }
   }
   return attempt;
-}
+};
 
 guessNumber(secretNumber);
