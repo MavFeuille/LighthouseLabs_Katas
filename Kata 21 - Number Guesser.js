@@ -1,5 +1,5 @@
 const prompt = require('prompt-sync')({
-  sigint: true, // Sigint set to be true to exit by ^C
+  sigint: true, // Sigint set to be true so to allow exit game by ^C
 });
 
 // Generate random number
