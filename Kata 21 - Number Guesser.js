@@ -1,3 +1,10 @@
+/*
+Write a guessing game where the user has to guess a secret number. 
+After every guess the program tells the user whether their number was too large or too small. 
+Inputting the same number multiple times should only count as one try.
+At the end, the number of tries needed should be printed.
+*/
+
 const prompt = require('prompt-sync')({
   sigint: true, // Sigint set to be true so to allow exit game by ^C
 });
