@@ -5,7 +5,7 @@ const prompt = require('prompt-sync')({
 // Generate random number
 const maxNum = 50;
 const secretNumber = (Math.ceil(Math.random() * maxNum));
-console.log("secretNumber = ",secretNumber)
+// console.log("secretNumber = ",secretNumber)
 
 
 const guessNumber = (secretNumber) => {
@@ -20,16 +20,14 @@ const guessNumber = (secretNumber) => {
   do {
     guess = Number(prompt("Guess a number: "));
     guessArray.push(guess);
-    console.log("guessArray at Line21 : ", guessArray);
-
-    
+    // console.log("guessArray at Line21 : ", guessArray);
 
     if (!hasDuplicate(guessArray)) {
       console.log("🚀 ~ file: Kata 21 - Number Guesser.js ~ line 38 ~ guessNumber ~ hasDuplicate", hasDuplicate(guessArray));
       console.log("Already guessed!");
     }
     if (guess < secretNumber) {
-      console.log("Too low! at line 30");
+      console.log("Too low!");
     }
     if (guess > secretNumber) {
       console.log("Too high!")
