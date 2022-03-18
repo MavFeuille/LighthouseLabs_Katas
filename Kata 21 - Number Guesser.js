@@ -23,13 +23,10 @@ const guessNumber = (secretNumber) => {
     console.log("guessArray at Line21 : ", guessArray);
 
     
- 
-
     if (!hasDuplicate(guessArray)) {
       console.log("🚀 ~ file: Kata 21 - Number Guesser.js ~ line 38 ~ guessNumber ~ hasDuplicate", hasDuplicate)
       console.log("Already guessed!");
     } else {
-      attempt ++;
       if (guess < secretNumber) {
         console.log("Too low! at line 30");
       }
