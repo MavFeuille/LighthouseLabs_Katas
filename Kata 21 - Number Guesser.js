@@ -39,7 +39,7 @@ const guessNumber = (secretNumber) => {
     }
     if (guess === secretNumber) {
       console.log(`You got it! You took ${countAttempts(guessArray)} attempts!`);
-      } 
+    } 
     
   } while (guess !== secretNumber);
 }
@@ -54,7 +54,7 @@ const hasDuplicate = (array) => {
   }
   return true;
 }
-// console.log("🚀 ~ file: Kata 21 - Number Guesser.js ~ line 34 ~ hasDuplicate ~ hasDuplicate", hasDuplicate(guessArray))
+
 
 //Helper function to count attempts of guessing a number
 const countAttempts = (array) => {
@@ -67,6 +67,6 @@ const countAttempts = (array) => {
   }
   return attempt;
 }
-// console.log("🚀 ~ file: Kata 21 - Number Guesser.js ~ line 35 ~ countAttempts ~ countAttempts", countAttempts(guessArray))
+
 
 guessNumber(secretNumber);
