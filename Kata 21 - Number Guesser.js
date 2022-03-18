@@ -24,7 +24,6 @@ const guessNumber = (secretNumber) => {
     //Helper function to check if guess already existed in guessArray (duplicates)
     const hasDuplicate = (guessArray) => {
       guessArray.sort();
-       
       for (let i = 0; i < guessArray.length; i++) {
         if (guessArray[i - 1] === guessArray[i]) {
           return false;
@@ -32,26 +31,27 @@ const guessNumber = (secretNumber) => {
       }
       return true;
     }
-    console.log("🚀 ~ file: Kata 21 - Number Guesser.js ~ line 36 ~ hasDuplicate ~ hasDuplicate", hasDuplicate(guessArray))
+    console.log("🚀 ~ file: Kata 21 - Number Guesser.js ~ line 34 ~ hasDuplicate ~ hasDuplicate", hasDuplicate(guessArray))
  
 
-    // if (hasDuplicate) {
-    //   console.log("Already guessed!");
-    // } else {
-    //   attempt ++;
-    //   if (guess < secretNumber) {
-    //     console.log("Too low! at line 30");
-    //   }
-    //   if (guess > secretNumber) {
-    //     console.log("Too high!")
-    //   }
-    //   if (isNaN(guess)) {
-    //     console.log("Not a number, Try again!")
-    //   }
-    //   if (guess === secretNumber) {
-    //     console.log(`You got it! You took ${attempt} attempts!`);
-    //   } 
-    // }    
+    if (!hasDuplicate(guessArray)) {
+      console.log("🚀 ~ file: Kata 21 - Number Guesser.js ~ line 38 ~ guessNumber ~ hasDuplicate", hasDuplicate)
+      console.log("Already guessed!");
+    } else {
+      attempt ++;
+      if (guess < secretNumber) {
+        console.log("Too low! at line 30");
+      }
+      if (guess > secretNumber) {
+        console.log("Too high!")
+      }
+      if (isNaN(guess)) {
+        console.log("Not a number, Try again!")
+      }
+      if (guess === secretNumber) {
+        console.log(`You got it! You took ${attempt} attempts!`);
+      } 
+    }    
   } while (guess !== secretNumber);
 }
 
