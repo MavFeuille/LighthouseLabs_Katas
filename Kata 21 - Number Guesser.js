@@ -7,12 +7,11 @@ const maxNum = 50;
 const secretNumber = (Math.ceil(Math.random() * maxNum));
 console.log("secretNumber = ",secretNumber)
 
-let guessArray = [];
 
 const guessNumber = (secretNumber) => {
   let attempt = 0;
   let guess;
-  // let guessArray = [];
+  let guessArray = [];
  
   // Prompt user to guess a number
   // Run through to check if guess === secretNumber
@@ -48,15 +47,15 @@ const guessNumber = (secretNumber) => {
 }
 
 //Helper function to check if guess already existed in guessArray (duplicates)
-const hasDuplicate = (guessArray) => {
-  guessArray.sort();
-  for (let i = 0; i < guessArray.length; i++) {
-    if (guessArray[i - 1] === guessArray[i]) {
+const hasDuplicate = (array) => {
+  array.sort();
+  for (let i = 0; i < array.length; i++) {
+    if (array[i - 1] === array[i]) {
       return false;
     }
   }
   return true;
 }
-console.log("🚀 ~ file: Kata 21 - Number Guesser.js ~ line 34 ~ hasDuplicate ~ hasDuplicate", hasDuplicate(guessArray))
+// console.log("🚀 ~ file: Kata 21 - Number Guesser.js ~ line 34 ~ hasDuplicate ~ hasDuplicate", hasDuplicate(guessArray))
 
 guessNumber(secretNumber);
