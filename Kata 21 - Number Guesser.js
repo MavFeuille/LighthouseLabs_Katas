@@ -22,18 +22,7 @@ const guessNumber = (secretNumber) => {
     guessArray.push(guess);
     console.log("guessArray at Line21 : ", guessArray);
 
-    //Helper function to count attempts of guessing a number
-    const countAttempts = (guessArray) => {
-      let attempt = 0;
-      guessArray.sort();
-      for (let i = 0; i < guessArray.length; i++) {
-        if (guessArray[i - 1] !== guessArray[i]) {
-          attempt++;
-        }
-      }
-      return attempt;
-    }
-    console.log("🚀 ~ file: Kata 21 - Number Guesser.js ~ line 35 ~ countAttempts ~ countAttempts", countAttempts(guessArray))
+    
 
     if (!hasDuplicate(guessArray)) {
       console.log("🚀 ~ file: Kata 21 - Number Guesser.js ~ line 38 ~ guessNumber ~ hasDuplicate", hasDuplicate(guessArray));
@@ -66,5 +55,18 @@ const hasDuplicate = (array) => {
   return true;
 }
 // console.log("🚀 ~ file: Kata 21 - Number Guesser.js ~ line 34 ~ hasDuplicate ~ hasDuplicate", hasDuplicate(guessArray))
+
+//Helper function to count attempts of guessing a number
+const countAttempts = (array) => {
+  let attempt = 0;
+  array.sort();
+  for (let i = 0; i < array.length; i++) {
+    if (array[i - 1] !== array[i]) {
+      attempt++;
+    }
+  }
+  return attempt;
+}
+// console.log("🚀 ~ file: Kata 21 - Number Guesser.js ~ line 35 ~ countAttempts ~ countAttempts", countAttempts(guessArray))
 
 guessNumber(secretNumber);
