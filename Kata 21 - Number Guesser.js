@@ -5,8 +5,6 @@ const prompt = require('prompt-sync')({
 // Generate random number
 const maxNum = 50;
 const secretNumber = (Math.ceil(Math.random() * maxNum));
-// console.log("secretNumber = ",secretNumber)
-
 
 const guessNumber = (secretNumber) => {
   let guess;
@@ -15,7 +13,6 @@ const guessNumber = (secretNumber) => {
   do {
     guess = Number(prompt("Guess a number: "));
     guessArray.push(guess);
-    // console.log("guessArray at Line21 : ", guessArray);
 
     if (!hasDuplicate(guessArray)) {
       console.log("Already guessed!");
@@ -32,7 +29,6 @@ const guessNumber = (secretNumber) => {
     if (guess === secretNumber) {
       console.log(`You got it! You took ${countAttempts(guessArray)} attempts!`);
     } 
-    
   } while (guess !== secretNumber);
 }
 
@@ -47,7 +43,6 @@ const hasDuplicate = (array) => {
   return true;
 }
 
-
 //Helper function to count attempts of guessing a number
 const countAttempts = (array) => {
   let attempt = 0;
@@ -59,6 +54,5 @@ const countAttempts = (array) => {
   }
   return attempt;
 }
-
 
 guessNumber(secretNumber);
