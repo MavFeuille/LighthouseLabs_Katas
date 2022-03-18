@@ -9,7 +9,6 @@ const secretNumber = (Math.ceil(Math.random() * maxNum));
 const guessNumber = (secretNumber) => {
   let guess;
   let guessArray = [];
- 
   do {
     guess = Number(prompt("Guess a number: "));
     guessArray.push(guess);
@@ -17,18 +16,10 @@ const guessNumber = (secretNumber) => {
     if (!hasDuplicate(guessArray)) {
       console.log("Already guessed!");
     }
-    if (guess < secretNumber) {
-      console.log("Too low!");
-    }
-    if (guess > secretNumber) {
-      console.log("Too high!")
-    }
-    if (isNaN(guess)) {
-      console.log("Not a number, Try again!")
-    }
-    if (guess === secretNumber) {
-      console.log(`You got it! You took ${countAttempts(guessArray)} attempts!`);
-    } 
+    if (guess < secretNumber) console.log("Too low!");
+    if (guess > secretNumber) console.log("Too high!");
+    if (isNaN(guess)) console.log("Not a number, Try again!");
+    if (guess === secretNumber) console.log(`You got it! You took ${countAttempts(guessArray)} attempts!`); 
   } while (guess !== secretNumber);
 }
 
