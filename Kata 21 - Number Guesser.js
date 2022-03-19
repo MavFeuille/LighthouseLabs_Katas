@@ -18,8 +18,11 @@ const guessNumber = (secretNumber) => {
   let guessArray = [];
   do {
     guess = Number(prompt("Guess a number: "));
-    guessArray.push(guess);
     if (!hasDuplicate(guessArray)) console.log("Already guessed!");
+    guessArray.push(guess);
+    console.log("🚀 ~ file: Kata 21 - Number Guesser.js ~ line 23 ~ guessNumber ~ guessArray", guessArray)
+
+    
     if (guess < secretNumber) console.log("Too low!");
     if (guess > secretNumber) console.log("Too high!");
     if (isNaN(guess)) console.log("Not a number, Try again!");
